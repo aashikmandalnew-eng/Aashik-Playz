@@ -1,3 +1,0 @@
-#!/bin/bash
-
-echo "A1SHIK HOSTING PANEL INSTALLER"

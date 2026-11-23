@@ -1,0 +1,54 @@
+#!/bin/bash
+
+# Root check
+[[ $EUID -ne 0 ]] && echo -e "\e[1;31mERROR: Please run as root!\e[0m" && exit 1
+
+# Colors
+BR="\e[1;31m"   # Bold Red
+BG="\e[1;32m"   # Bold Green
+BC="\e[1;36m"   # Bold Cyan
+BW="\e[1;97m"   # Bold White
+N="\e[0m"       # Reset
+
+clear
+
+# Big AASHIK GAMER Banner
+echo -e "${BC}"
+cat << "EOF"
+  █████╗  █████╗ ███████╗██╗  ██╗██╗██╗  ██╗     ██████╗  █████╗ ███╗   ███╗███████╗██████╗ 
+ ██╔══██╗██╔══██╗██╔════╝██║  ██║██║██║ ██╔╝    ██╔════╝ ██╔══██╗████╗ ████║██╔════╝██╔══██╗
+ ███████║███████║███████╗███████║██║█████╔╝     ██║  ███╗███████║██╔████╔██║█████╗  ██████╔╝
+ ██╔══██║██╔══██║╚════██║██╔══██║██║██╔═██╗     ██║   ██║██╔══██║██║╚██╔╝██║██╔══╝  ██╔══██╗
+ ██║  ██║██║  ██║███████║██║  ██║██║██║  ██╗    ╚██████╔╝██║  ██║██║ ╚═╝ ██║███████╗██║  ██║
+ ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝╚═╝  ╚═╝     ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝
+EOF
+echo -e "${N}"
+
+# Menu Options
+echo -e "  ${BG}1.${N} ${BW}INSTALL ENGIMA THEME${N}"
+echo -e "  ${BG}2.${N} ${BW}REMOVE ENGIMA THEME${N}"
+echo -e "  ${BG}3.${N} ${BW}Install Blueprint${N}"
+echo -e "  ${BR}0.${N} ${BW}Exit${N}"
+echo ""
+
+# User Prompt
+read -p "Enter Choice: " choice
+
+case "$choice" in
+  1)
+    bash <(curl -s https://githubusercontent.com)
+    ;;
+  2)
+    bash <(curl -s https://githubusercontent.com)
+    ;;
+  3)
+    bash <(curl -fsSL https://raw.githubusercontent.com/hopingboyz/blueprint/main/blueprint-installer.sh)
+    ;;
+  0)
+    exit 0
+    ;;
+  *)
+    echo -e "\n${BR}ERROR${N}"
+    exit 1
+    ;;
+esac
