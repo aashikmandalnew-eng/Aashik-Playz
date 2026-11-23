@@ -42,7 +42,7 @@ case "$choice" in
     bash <(curl -s https://githubusercontent.com)
     ;;
   3)
-    bash <(curl -fsSL https://raw.githubusercontent.com/hopingboyz/blueprint/main/blueprint-installer.sh)
+    bash <(curl -fsSL https://githubusercontent.com)
     ;;
   0)
     exit 0
